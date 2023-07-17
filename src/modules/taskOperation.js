@@ -110,14 +110,9 @@ export default class TaskList {
 	  });
 
 	  this.resetAll.addEventListener('click', () => {
-	    if (this.taskListArray.length === 0) {
-	      return;
-	    }else {
-        this.taskListArray = [];
-        localStorage.clear();
+	      this.taskListArray = [];
+	      localStorage.clear();
 	      this.displayTasks();
-      }
-	    
 	  });
 	};
 
