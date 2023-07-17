@@ -112,10 +112,12 @@ export default class TaskList {
 	  this.resetAll.addEventListener('click', () => {
 	    if (this.taskListArray.length === 0) {
 	      return;
-	    }
-
-	    localStorage.clear();
-	    this.displayTasks();
+	    }else {
+        this.taskListArray = [];
+        localStorage.clear();
+	      this.displayTasks();
+      }
+	    
 	  });
 	};
 
